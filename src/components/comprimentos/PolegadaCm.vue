@@ -1,6 +1,6 @@
 <template>
   <div class="polegada">
-    <div class="card text-white bg-sucess mb-3 animate__animated animate__fadeInLeft" style="max-width: 20rem;">
+    <div class="card text-white bg-success mb-3 animate__animated animate__fadeInLeft" style="max-width: 20rem;">
       <div class="card-header">Polegada para Cm</div>
       <div class="card-body">
         <div class="card-text">
@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="card text-white bg-sucess mb-3 animate__animated animate__fadeInRight" style="max-width: 20rem;">
+    <div class="card text-white bg-success mb-3 animate__animated animate__fadeInRight" style="max-width: 20rem;">
       <div class="card-header">Cm para Polegada</div>
       <div class="card-body">
         <div class="card-text">
