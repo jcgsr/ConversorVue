@@ -1,6 +1,7 @@
 <template>
-  <div class="footer">
-    &copy;{{ footer }} <br />
+  <div class="footer">    
+    &copy;{{ footer }}
+    <br />
     <a class="btn-info" :href="link">Jovane</a>
   </div>
 </template>
@@ -10,9 +11,10 @@ export default {
   data() {
     return {
       footer: "2020 - Conversor Vue criado e desenvolvido por ",
-      link: "https://jcgsr.github.io/"
+      link: "https://jcgsr.github.io/",
+      dataAtual: ""
     };
-  }
+  },  
 };
 </script>
 
@@ -27,4 +29,6 @@ export default {
 a:link {
   text-decoration: none;
 }
+
+
 </style>

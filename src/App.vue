@@ -13,11 +13,16 @@
         type="button"
         class="btn btn-primary animate__animated animate__fadeInDown"
       >Comprimento</button>
-      <button @click="massa" type="button" class="btn btn-primary animate__animated animate__backInRight">Massa</button>
+      <button
+        @click="massa"
+        type="button"
+        class="btn btn-primary animate__animated animate__backInRight"
+      >Massa</button>
     </div>
     <Temperatura v-if="showTemperatura" />
     <Comprimento v-if="showComprimento" />
-    <Massa v-if="showMassa" />    
+    <Massa v-if="showMassa" />
+    <p>{{ dataAtual }}</p>
     <Footer />
   </div>
 </template>
@@ -35,30 +40,45 @@ export default {
       titulo: "Conversor Vue",
       showTemperatura: true,
       showComprimento: false,
-      showMassa: false
-    }
+      showMassa: false,
+      dataAtual: ''
+    };
   },
   components: {
-    Footer, Temperatura, Comprimento, Massa, Title
+    Footer,
+    Temperatura,
+    Comprimento,
+    Massa,
+    Title
   },
   methods: {
     temperatura() {
-      this.showTemperatura = true
-      this.showComprimento = false
-      this.showMassa = false
+      this.showTemperatura = true;
+      this.showComprimento = false;
+      this.showMassa = false;
     },
     comprimento() {
-      this.showComprimento = true,
-      this.showTemperatura = false
-      this.showMassa = false
+      (this.showComprimento = true), (this.showTemperatura = false);
+      this.showMassa = false;
     },
-    massa () {
-      this.showMassa = true
-      this.showComprimento = false
-      this.showTemperatura = false
+    massa() {
+      this.showMassa = true;
+      this.showComprimento = false;
+      this.showTemperatura = false;
+    },
+    hoje() {
+      let dataHoje = new Date();
+      this.dataAtual = dataHoje.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+      });
     }
+  },
+  mounted() {
+    this.hoje();
   }
-}
+};
 </script>
 
 <style>
