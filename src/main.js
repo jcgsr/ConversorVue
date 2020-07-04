@@ -3,6 +3,7 @@ import App from './App.vue'
 
 
 import Footer from './components/Footer.vue'
+import Title from './components/Title.vue'
 import Temperatura from './components/Temperatura.vue'
 import Massa from './components/Massa.vue'
 import Comprimento from './components/comprimentos/Comprimento.vue'
@@ -15,7 +16,7 @@ import 'animate.css'
 
 Vue.config.productionTip = false
 Vue.component([
- Temperatura, Footer, Comprimento, Massa
+ Temperatura, Footer, Comprimento, Massa, Title
 ])
 
 new Vue({  

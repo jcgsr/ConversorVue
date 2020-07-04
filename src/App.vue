@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <h1 class="animate__animated animate__bounce">{{ titulo }}</h1>
+    <Title />
+    <!-- <h1 class="animate__animated animate__bounce">{{ titulo }}</h1> -->
     <div class="button-div">
       <button
         @click="temperatura"
@@ -23,6 +24,7 @@
 
 <script>
 import Temperatura from "./components/Temperatura";
+import Title from "./components/Title";
 import Massa from "./components/Massa";
 import Comprimento from "./components/comprimentos/Comprimento";
 import Footer from "./components/Footer";
@@ -37,7 +39,7 @@ export default {
     }
   },
   components: {
-    Footer, Temperatura, Comprimento, Massa
+    Footer, Temperatura, Comprimento, Massa, Title
   },
   methods: {
     temperatura() {
