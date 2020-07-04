@@ -4,7 +4,8 @@ import App from './App.vue'
 
 import Footer from './components/Footer.vue'
 import Temperatura from './components/Temperatura.vue'
-import Comprimento from './components/Comprimento.vue'
+import Massa from './components/Massa.vue'
+import Comprimento from './components/comprimentos/Comprimento.vue'
 
 import 'jquery'
 import 'popper.js'
@@ -14,7 +15,7 @@ import 'animate.css'
 
 Vue.config.productionTip = false
 Vue.component([
- Temperatura, Footer, Comprimento
+ Temperatura, Footer, Comprimento, Massa
 ])
 
 new Vue({  

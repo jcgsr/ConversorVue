@@ -1,5 +1,5 @@
 <template>
-  <div class="tempetatura">
+  <div class="comprimento">
     <div class="card text-white bg-primary mb-3 animate__animated animate__fadeInLeft" style="max-width: 20rem;">
       <div class="card-header">Pé para Metro</div>
       <div class="card-body">
@@ -21,10 +21,14 @@
         </div>
       </div>
     </div>
+    <MilhasKm />
+    <PolegadaCm />
   </div>  
 </template>
 
 <script>
+import MilhasKm from './MilhasKm'
+import PolegadaCm from './PolegadaCm'
 export default {
   data() {
     return {
@@ -42,12 +46,15 @@ export default {
     result1() {
       return (this.number1 * 3.281).toFixed(2) + ' m'
     }
+  },
+  components: {
+    MilhasKm, PolegadaCm
   }
 };
 </script>
 
 <style>
-.temperatura {
+.comprimento {
   color: aliceblue;
   text-align: center;
 }

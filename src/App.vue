@@ -12,17 +12,19 @@
         type="button"
         class="btn btn-primary animate__animated animate__fadeInDown"
       >Comprimento</button>
-      <button type="button" class="btn btn-primary animate__animated animate__backInRight">Massa</button>
+      <button @click="massa" type="button" class="btn btn-primary animate__animated animate__backInRight">Massa</button>
     </div>
     <Temperatura v-if="showTemperatura" />
     <Comprimento v-if="showComprimento" />
+    <Massa v-if="showMassa" />    
     <Footer />
   </div>
 </template>
 
 <script>
 import Temperatura from "./components/Temperatura";
-import Comprimento from "./components/Comprimento";
+import Massa from "./components/Massa";
+import Comprimento from "./components/comprimentos/Comprimento";
 import Footer from "./components/Footer";
 
 export default {
@@ -30,19 +32,27 @@ export default {
     return {
       titulo: "Conversor Vue",
       showTemperatura: true,
-      showComprimento: false
+      showComprimento: false,
+      showMassa: false
     }
   },
   components: {
-    Footer, Temperatura, Comprimento
+    Footer, Temperatura, Comprimento, Massa
   },
   methods: {
     temperatura() {
       this.showTemperatura = true
       this.showComprimento = false
+      this.showMassa = false
     },
     comprimento() {
       this.showComprimento = true,
+      this.showTemperatura = false
+      this.showMassa = false
+    },
+    massa () {
+      this.showMassa = true
+      this.showComprimento = false
       this.showTemperatura = false
     }
   }

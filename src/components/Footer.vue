@@ -23,4 +23,8 @@ export default {
   background-color: aqua;
   color: rgb(62, 42, 134);
 }
+
+a:link {
+  text-decoration: none;
+}
 </style>
