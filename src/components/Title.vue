@@ -1,25 +1,31 @@
 <template>
 <div class="knockout animate__animated animate__bounce">
-   <h1>
-      <a href="http://mksht.crisnoble.com" rel="Like cool shit? visit my site">Conversor Vue</a>
-      </h1>
+   <a :href="link"><h1>Conversor Vue</h1></a> 
 </div>
 </template>
 
 <script>
 export default {  
-  
+  data() {
+    return {
+      link: 'https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    }
+  }
 };
 </script>
 
 <style scoped>
 .knockout h1{
-  background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+  background: url(https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) -80px -80px;
   color: red;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-weight: bold;   
-  text-align: center;
+  text-align: center;  
+}
+
+.knockout a:link {
+  text-decoration: none;
 }
 
 </style>
