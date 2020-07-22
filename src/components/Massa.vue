@@ -30,17 +30,17 @@ export default {
     return {
       subtitulo: "Libra - Kg",
       subtitulo1: "Kg - Libra",
-      number: 0,
-      number1: 0,
+      number: 1,
+      number1: 1,
     };
   },
 
   computed: {
     result() {
-      return (this.number / 2.205).toFixed(2) + ' kg' 
+      return (this.number / 2.205).toFixed(2) + 'kg' 
     },
     result1() {
-      return (this.number1 * 2.205).toFixed(2) + ' lb'
+      return (this.number1 * 2.205).toFixed(2) + 'lb'
     }
   }
 };

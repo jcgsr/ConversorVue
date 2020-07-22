@@ -30,17 +30,17 @@ export default {
     return {
       subtitulo: "Milha - Km",
       subtitulo1: "Km - Milha",
-      number: 0,
-      number1: 0,
+      number: 1,
+      number1: 1,
     };
   },
 
   computed: {
     result() {
-      return (this.number * 1.609).toFixed(2) + ' km' 
+      return (this.number * 1.609).toFixed(2) + 'km' 
     },
     result1() {
-      return (this.number1 / 1.609).toFixed(2) + ' mi'
+      return (this.number1 / 1.609).toFixed(2) + 'mi'
     }
   }
 };

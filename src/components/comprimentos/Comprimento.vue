@@ -34,17 +34,17 @@ export default {
     return {
       subtitulo: "Pés - Metro",
       subtitulo1: "Metro - Pés",
-      number: 0,
-      number1: 0,
+      number: 1,
+      number1: 1,
     };
   },
 
   computed: {
     result() {
-      return (this.number / 3.281).toFixed(2) + ' ft' 
+      return (this.number / 3.281).toFixed(2) + 'ft' 
     },
     result1() {
-      return (this.number1 * 3.281).toFixed(2) + ' m'
+      return (this.number1 * 3.281).toFixed(2) + 'm'
     }
   },
   components: {

@@ -30,17 +30,17 @@ export default {
     return {
       subtitulo: "Polegada - Cm",
       subtitulo1: "Cm - Polegada",
-      number: 0,
-      number1: 0,
+      number: 1,
+      number1: 1,
     };
   },
 
   computed: {
     result() {
-      return (this.number * 2.54).toFixed(2) + ' cm' 
+      return (this.number * 2.54).toFixed(2) + 'cm' 
     },
     result1() {
-      return (this.number1 / 2.54).toFixed(2) + ' in'
+      return (this.number1 / 2.54).toFixed(2) + 'in'
     }
   }
 };
